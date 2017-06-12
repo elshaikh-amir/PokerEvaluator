@@ -34,19 +34,19 @@ List<Card> table = new ArrayList<Card>() {{
 				);
 			}};
       
-			Combination combo1 = hand1.eval(table); // Evaluate hand1 with that given table cards
-			Combination combo2 = hand2.eval(table);
+Combination combo1 = hand1.eval(table); // Evaluate hand1 with that given table cards
+Combination combo2 = hand2.eval(table);
       
-			System.out.println("Hand1: " +  combo1.getComboType() + " - " + combo1.getComboCards());
-			System.out.println("Hand2: " + combo2.getComboType() + " - " + combo2.getComboCards());
+System.out.println("Hand1: " +  combo1.getComboType() + " - " + combo1.getComboCards());
+System.out.println("Hand2: " + combo2.getComboType() + " - " + combo2.getComboCards());
 			
-			int compared = combo1.compareTo(combo2); // Any Combination can be compared to any other Combination
-			if(compared < 0)
-				System.out.println("hand1 < hand2");
-			else if(compared == 0)
-				System.out.println("hand1 = hand2");
-			else
-				System.out.println("hand1 > hand2");
+int compared = combo1.compareTo(combo2); // Any Combination can be compared to any other Combination
+if(compared < 0)
+	System.out.println("hand1 < hand2");
+else if(compared == 0)
+	System.out.println("hand1 = hand2");
+else
+	System.out.println("hand1 > hand2");
      
      
      // Output is: 
