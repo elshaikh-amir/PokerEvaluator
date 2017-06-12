@@ -7,9 +7,9 @@ Classes: Hand, Combination, CardDeck52, Card
 
 // Examples: 
 Hand hand1 = new Hand(
-               new Card(5, Diamonds), // 5 of Diamonds (CardDeck52.Card.Sign.Diamonds)
-               new Card(14, Diamonds) // Or: new Card(Card.ACE, Diamonds). Ace of Diamonds
-              );
+	new Card(5, Diamonds), // 5 of Diamonds (CardDeck52.Card.Sign.Diamonds)
+	new Card(14, Diamonds) // Or: new Card(Card.ACE, Diamonds). Ace of Diamonds
+);
              
 Hand hand2 = new Hand(
                new Card(5, Spades), // 5 of Spades
