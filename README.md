@@ -5,7 +5,7 @@ Files: Hand.java, CardDeck52.java
 Classes: Hand, Combination, CardDeck52, Card
 ------------------------------------------------------------------
 
-Examples:
+// Examples: 
 Hand hand1 = new Hand(
                new Card(5, Diamonds), // 5 of Diamonds (CardDeck52.Card.Sign.Diamonds)
                new Card(14, Diamonds) // Or: new Card(Card.ACE, Diamonds). Ace of Diamonds
