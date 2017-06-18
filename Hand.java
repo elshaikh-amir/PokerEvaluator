@@ -26,11 +26,16 @@ public class Hand{
 		private CombinationType comboType;
 		private List<Card> tableCards;
 		private List<Card> all5ComboCards;
+		private List<Card> all7Cards;
 		private Hand hand;
 		
 		private Combination(List<Card> tableCards, Hand hand) {
 			this.tableCards = tableCards;
 			this.hand = hand;
+			this.all7Cards = new ArrayList<>(7);
+			this.all7Cards.addAll(tableCards);
+			this.all7Cards.addAll(hand.asList());
+			Collections.sort(this.all7Cards);
 			this.all5ComboCards = new ArrayList<>(5);
 			eval(this);
 		}
@@ -273,8 +278,6 @@ public class Hand{
 		
 		private static void eval(Combination combo) {
 			List<Card> all7Cards = combo.getAll7Cards();
-			Collections.sort(all7Cards);
-
 			boolean hasPair 		 	= false;
 			boolean hasPairControler 	= false;
 			boolean has2Pair 		 	= false;
