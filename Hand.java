@@ -9,6 +9,9 @@ import gameBasics.CardDeck52.Card.Sign;
 import static poker.Hand.CombinationType.*;
 
 public class Hand{
+	public static final int MAX_HAND_TABLE_CARD_COUNT = 7;
+	public static final int MAX_COMBINATION_CARD_COUNT = 5;
+	
 	public static enum CombinationType {
 		HighCard,
 		OnePair,
@@ -32,11 +35,11 @@ public class Hand{
 		private Combination(List<Card> tableCards, Hand hand) {
 			this.tableCards = tableCards;
 			this.hand = hand;
-			this.all7Cards = new ArrayList<>(7);
+			this.all7Cards = new ArrayList<>(MAX_HAND_TABLE_CARD_COUNT);
 			this.all7Cards.addAll(tableCards);
 			this.all7Cards.addAll(hand.asList());
 			Collections.sort(this.all7Cards);
-			this.all5ComboCards = new ArrayList<>(5);
+			this.all5ComboCards = new ArrayList<>(MAX_COMBINATION_CARD_COUNT);
 			eval(this);
 		}
 		
@@ -465,8 +468,6 @@ public class Hand{
 			return 0; // all equals
 		}
 	}
-	
-	public static int HAND_TABLE_CARD_COUNT = 7;
 	
 	private Card card1;
 	private Card card2;
