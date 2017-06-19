@@ -502,6 +502,6 @@ public class Hand{
 	}
 	
 	public List<Card> asList() {
-		return new ArrayList<Card>(Arrays.asList(this.card1, this.card2));
+		return Arrays.asList(this.card1, this.card2);
 	}
 }
